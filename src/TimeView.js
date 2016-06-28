@@ -40,7 +40,7 @@ var DateTimePickerTime = React.createClass({
 	renderCounter: function( type ){
 		if (type !== 'daypart') {
 			var value = this.state[ type ];
-			if (type === 'hours' && this.props.timeFormat.indexOf(' A') != -1 && value > 12) {
+			if (type === 'hours' && this.props.timeFormat.indexOf(' A') != -1 && value >= 12) {
 				if(value > 12){
 					value = value - 12;
 				}
